@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05070b">
+<title>OMNIX - Future Technology</title>
+
+<style>
+:root {
+  --bg:#05070b;
+  --panel:#090d14;
+  --blue:#168bff;
+  --text:#ffffff;
+  --muted:#9baabe;
+  --line:#1d2a3b;
+}
+* {
+  box-sizing:border-box;
+}
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,sans-serif;
+}
+button,input,textarea {
+  font:inherit;
+}
+button {
+  cursor:pointer;
+}
+.topbar {
+  height:75px;
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:#05070b;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 25px;
+}
+.brand {
+  font-size:30px;
+  font-weight:900;
+  color:var(--blue);
+  letter-spacing:2px;
+}
+.search {
+  width:40%;
+  padding:13px 20px;
+  border-radius:30px;
+  background:#101722;
+  border:1px solid var(--line);
+  color:white;
+  outline:none;
+}
+.icons {
+  display:flex;
+  gap:20px;
+  color:var(--blue);
+  font-size:25px;
+}
+.layout {
+  display:grid;
+  grid-template-columns:230px minmax(300px,680px) 230px;
+  gap:20px;
+  max-width:1450px;
+  margin:auto;
+  padding:25px 20px;
+}
+.sidebar {
+  position:sticky;
+  top:95px;
+  height:fit-content;
+}
+.nav {
+  width:100%;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  padding:16px;
+  margin-bottom:7px;
+  border:0;
+  border-radius:12px;
+  color:white;
+  background:transparent;
+  text-align:left;
+  font-size:16px;
+}
+.nav:hover,.nav.active {
+  background:#10213a;
+  color:var(--blue);
+}
+.nav span {
+  font-size:22px;
+}
+.panel {
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:17px;
+  margin-bottom:18px;
+}
+.stories {
+  display:flex;
+  gap:17px;
+  overflow-x:auto;
+  padding-bottom:18px;
+}
+.story {
+  min-width:70px;
+  text-align:center;
+  color:white;
+  font-size:12px;
+}
+.story img {
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  border:3px solid var(--blue);
+  object-fit:cover;
+  display:block;
+  margin-bottom:7px;
+}
+.composer {
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.composer textarea {
+  flex:1;
+  background:#151c27;
+  color:white;
+  border:0;
+  border-radius:25px;
+  padding:15px;
+  resize:vertical;
+}
+.blue-btn {
+  background:var(--blue);
+  color:white;
+  border:0;
+  padding:11px 20px;
+  border-radius:25px;
+  font-weight:bold;
+}
+.post {
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  margin-bottom:20px;
+}
+.post-head {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:16px;
+}
+.avatar {
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  object-fit:cover;
+}
+.post-text {
+  padding:0 17px 15px;
+  line-height:1.6;
+}
+.post-image {
+  width:100%;
+  max-height:420px;
+  object-fit:cover;
+}
+.post-actions {
+  display:flex;
+  justify-content:space-around;
+  padding:13px;
+}
+.post-actions button {
+  background:transparent;
+  color:var(--blue);
+  border:0;
+  font-size:15px;
+}
+.side-title {
+  color:var(--blue);
+  margin-bottom:15px;
+}
+.friend {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:14px 0;
+  font-size:13px;
+}
+.friend img {
+  width:36px;
+  height:36px;
+  border-radius:50%;
+}
+.trend {
+  padding:12px 0;
+  border-bottom:1px solid var(--line);
+  color:var(--blue);
+}
+@media(max-width:1050px) {
+  .layout {
+    grid-template-columns:190px 1fr;
+  }
+  .rightbar {
+    display:none;
+  }
+}
+@media(max-width:650px) {
+  .topbar {
+    height:62px;
+    padding:0 12px;
+  }
+  .brand {
+    font-size:24px;
+  }
+  .search {
+    display:none;
+  }
+  .layout {
+    display:block;
+    padding:12px 9px 80px;
+  }
+  .sidebar {
+    display:none;
+  }
+  .bottom-nav {
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:65px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    background:#05070b;
+    border-top:1px solid var(--line);
+  }
+  .bottom-nav button {
+    background:none;
+    border:0;
+    color:var(--blue);
+    font-size:24px;
+  }
+}
+</style>
+</head>
+<body>
